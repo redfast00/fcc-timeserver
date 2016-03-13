@@ -1,4 +1,4 @@
-var port = 8080;
+var port = 8060;
 var http = require('http');
 var URL = require('url');
 var server = http.createServer(function(req, res) {
@@ -17,12 +17,12 @@ var server = http.createServer(function(req, res) {
         return true;
     }
     else {
-        res.writeHead(200, {'Content-Type': 'text/json'});
+        res.writeHead(200, {'Content-Type': 'application/json'});
         res.end(JSON.stringify({'unix': null, 'natural': null}));
         return true;
     }
     
-    res.writeHead(200, {'Content-Type': 'text/json'});
+    res.writeHead(200, {'Content-Type': 'application/json'});
     res.end(JSON.stringify({'unix': dateToParse.getTime() / 1000, 'natural': dateToParse.toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric' })}));
 });
 server.listen(port);

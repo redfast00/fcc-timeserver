@@ -1,0 +1,8 @@
+{
+  "name": "timeserver",
+  "description": "A heroku timeserver",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
