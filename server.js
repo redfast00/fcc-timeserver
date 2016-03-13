@@ -1,4 +1,4 @@
-var port = 8060;
+var port = 80;
 var http = require('http');
 var URL = require('url');
 var server = http.createServer(function(req, res) {
